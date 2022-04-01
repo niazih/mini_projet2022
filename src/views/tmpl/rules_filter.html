@@ -1,0 +1,39 @@
+{% block title %}Client{% endblock %}
+{% block breadcrumb %}Client{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="css/default.css">
+{% endblock %}
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+<h2>Liste des règles du filtrage de Nat</h2>
+
+<table id="myTab" class="table table-striped">
+    <thead>
+      <tr>
+        <th>idNat</th>
+        <th>name</th>
+        <th>ipAddressSrc</th>
+        <th>portSrc</th>
+        <th>ipAddressDst</th>
+        <th>portDst</th>
+        <th>type</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for row in items %}
+        <tr>
+            <td>{{ row.idNat }}</td>
+            <td>{{ row.name }}</td>
+            <td>{{ row.ipAddressSrc }}</td>
+            <td>{{ row.portSrc }}</td>
+            <td>{{ row.ipAddressDst }}</td>
+            <td>{{ row.portDst }}</td>
+            <td>{{ row.type }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

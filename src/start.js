@@ -24,6 +24,9 @@ app.get('/alias', alias.render);
 var nat = require('./controllers/iptables/nat');
 app.get('/nat', nat.render);
 
+var filter = require('./controllers/iptables/filter');
+app.get('/filter', filter.render);
+
 // Routes statiques
 app.use('/css/bootstrap.min.css', express.static('node_modules/bootstrap/dist/css/bootstrap.min.css'));
 app.use('/css/bootstrap.min.css.map', express.static('node_modules/bootstrap/dist/css/bootstrap.min.css.map'));
