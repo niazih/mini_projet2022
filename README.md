@@ -43,3 +43,4 @@ To start the application, go in your Terminal, change your directory for src, an
 To start the application, go in your Terminal, change your directory for src, and enter this command :
 
  `npm run watch`
+# mini_projet2022
